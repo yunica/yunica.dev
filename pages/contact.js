@@ -6,24 +6,24 @@ import Card from "@mui/material/Card";
 import DashboardLayout from "/examples/LayoutContainers/DashboardLayout";
 import MDBox from "/components/MDBox";
 import MDTypography from "/components/MDTypography";
-// import MDButton from "/components/MDButton";
+import MuiLink from "@mui/material/Link";
+import MDButton from "/components/MDButton";
+
 // Wizard application components
-import FormField from "/pagesComponents/applications/wizard/components/FormField";
 import { useMaterialUIController } from "/context";
 
 import SocialContact from "/pagesComponents/social/contact";
 
 function Contact() {
   const [controller] = useMaterialUIController();
-
   const { darkMode } = controller;
 
   return (
     <DashboardLayout>
       <MDBox pt={3} pb={6}>
-        <Grid container justifyContent="center" sx={{ my: 4 }}>
+        <Grid container justifyContent="center" sx={{ my: 2 }}>
           <Grid item xs={12} lg={8}>
-            <Card>
+            <Card height>
               <MDBox
                 mt={-3}
                 mx={2}
@@ -45,7 +45,7 @@ function Contact() {
                 </MDTypography>
               </MDBox>
               <MDBox p={2}>
-                <MDBox m1={2}>
+                <MDBox>
                   <Grid container spacing={3}>
                     <Grid item xs={12} sm={5} container justifyContent="center">
                       <MDBox mb={1}>
@@ -73,34 +73,26 @@ function Contact() {
                         <SocialContact />
                       </MDBox>
                     </Grid>
-                    <Grid item xs={12} sm={7}>
+                    <Grid item xs={12} md={7}>
                       <Grid container spacing={3}>
                         <Grid item xs={12} sm={12}>
-                          <FormField type="text" label="Full Name" />
-                        </Grid>
-
-                        <Grid item xs={12} sm={6}>
-                          <FormField type="text" label="Company" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                          <FormField type="email" label="Email Address" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                          <FormField type="tel" label="Phone" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                          <FormField type="text" label="Service" />
-                        </Grid>
-                        <Grid item xs={12} sm={12}>
-                          <FormField
-                            type="text"
-                            multiline
-                            rows={3}
-                            label="Description"
-                          />
-                        </Grid>
-                        <Grid item xs={12} sm={12} mt={2} mb={2}>
-                  
+                          <MDTypography variant="body2" color="text">
+                            Ready to discuss? Use the button below to book your
+                            appointment
+                          </MDTypography>
+                          <MuiLink
+                            underline="hover"
+                            href="https://calendar.app.google/HMjTqixJrNb5E6ST6"
+                            target="_blank"
+                            sx={{
+                              textDecoration: "none",
+                              pointerEvents: "auto",
+                            }}
+                          >
+                            <MDButton color={darkMode ? "white" : "dark"}>
+                              Book an appointment
+                            </MDButton>
+                          </MuiLink>
                         </Grid>
                       </Grid>
                     </Grid>
