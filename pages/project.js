@@ -35,21 +35,19 @@ export async function getStaticProps() {
     };
   });
   const data = await Promise.all(dataPromises);
-  
-  const data_ = data.filter((a) => !a.draft).sort((a, b) =>   a.order-b.order);
+
+  const data_ = data.filter((a) => !a.draft).sort((a, b) => a.order - b.order);
   return { props: { data: data_ } };
 }
 
 function Project({ data }) {
-
-  const renderProjects = data
-    .map((feature) => (
-      <Grid item xs={12} md={4} lg={3} key={feature.filename}>
-        <MDBox mt={3}>
-          <BookingCard image={feature.image} {...feature} />
-        </MDBox>
-      </Grid>
-    ));
+  const renderProjects = data.map((feature) => (
+    <Grid item xs={12} md={4} lg={3} key={feature.filename}>
+      <MDBox mt={3}>
+        <BookingCard image={feature.image} {...feature} />
+      </MDBox>
+    </Grid>
+  ));
 
   return (
     <DashboardLayout>

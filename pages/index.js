@@ -68,11 +68,12 @@ function Main() {
                     alt="Junior Flores - Geospatial Data Engineer"
                     layout="fill"
                     objectFit="cover"
+                    hidden={true}
                     quality={70}
                     objectPosition="top"
                   />
                 </Box>
-                <Grid container spacing={1} zIndex={1}>
+                <Grid container spacing={1} zIndex={1} mt={5}>
                   <Grid item md={12} mt={3}>
                     <MDTypography
                       variant="h1"
@@ -104,15 +105,16 @@ function Main() {
                           color="dark"
                           fontWeight="light"
                         >
-                          I am a Data Engineer specialized in Geospatial Information Systems(GIS), with extensive experience
-                          in developing optimized ETL (Extract, Transform, Load)
+                          I am a Data Engineer specialized in Geospatial
+                          Information Systems(GIS), with extensive experience in
+                          developing optimized ETL (Extract, Transform, Load)
                           processes and in creating tools for generating data
                           for Machine Learning. As a Data Engineer, I am
                           committed to refining data pipelines, effectively
                           transforming raw data into essential resources for
                           various applications.
-                          <br />
-                          I have a strong proficiency in backend development, which I consider my area of expertise.
+                          <br />I have a strong proficiency in backend
+                          development, which I consider my area of expertise.
                         </MDTypography>
                       </MDBox>
                     </Card>
@@ -143,7 +145,7 @@ function Main() {
                       color="success"
                       iconLink={
                         <MuiLink
-                          href="/junior-flores-cv.pdf"
+                          href="/junior_flores_cv.pdf"
                           target="_blank"
                           rel="noreferrer"
                           download
@@ -152,7 +154,7 @@ function Main() {
                         </MuiLink>
                       }
                       title="1"
-                      description="Download Resume (PDF)"
+                      description="Download Resume"
                     />
                   </Grid>
                 </Grid>
