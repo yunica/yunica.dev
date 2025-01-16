@@ -1,10 +1,10 @@
 ---
-title: "Catastre pichari"
+title: "Gis Catastre software"
 image: /assets/catastro-pich.png
 description: I structured the cadastral information of a local government with a geospatial application.
-external_link: 
+external_link:
 order: 2
-category: 
+category:
   - python
   - react
   - django
@@ -16,10 +16,4 @@ category:
   - postgresql
 ---
 
-bod
-
-```javascript
-function saludo(nombre) {
-  console.log(`Hola, ${nombre}!`);
-}
-```
+b

@@ -1,17 +1,13 @@
 ---
 title: "Josm Magic Wand plugin"
-image: /assets/product-1-min.jpg
-description: Desarrolle un plugin para eliminar secuencias innecesarias en un proceso de limpiesa de secuencias por parte de mapillary, cada seucencia cuenta con alrededor de 50 puntos.
-external_link: 
-draft: true
+image: /assets/josm-seq-viewer.jpg
+description: I developed a plugin for JOSM that streamlines the process of cleaning Mapillary images by removing unnecessary sequences. Each sequence corresponds to the movement direction of a vehicle.
+external_link:
 order: 2
-category: 
+category:
   - java
   - openstreetmap
-  - opencv
   - gradle
 ---
 
 bod
-
- 

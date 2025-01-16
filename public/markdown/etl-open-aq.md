@@ -1,22 +1,12 @@
 ---
-title: "etl - open aq"
-image: /assets/product-1-min.jpg
-description: Engineer specialized in geospatial information systems, expert in building tools for generating valuable data for machine learning.
+title: Data process for OpenAQ platform
+image: /assets/openaq.png
+description: I updated and added new scripts to the data collection tool for the OpenAQ platform. This update focused on enhancing ETL processes, implemented entirely in JavaScript.
 repo: https://github.com/openaq/openaq-fetch
-draft: true
 order: 2
-category: 
+category:
   - nodejs
   - amazonaws
-
+  - docker
+  - javascript
 ---
-
-bod
-
-```javascript
-function saludo(nombre) {
-  console.log(`Hola, ${nombre}!`);
-}
-```
-
-![image](/public/assets/product-1-min.jpg)

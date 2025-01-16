@@ -17,7 +17,7 @@ category:
   - nginx
   - amazonrds
   - amazonroute53
+draft: true
 ---
 
 bod
-

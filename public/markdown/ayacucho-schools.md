@@ -5,7 +5,7 @@ description: Mobile Signal Coverage in Educational Institutions of Ayacucho, An 
 external_link: https://ayacucho-schools.surge.sh/
 repo:
 order: 3
-category: 
+category:
   - python
   - react
   - mapbox
@@ -15,6 +15,3 @@ category:
   - gdal
   - leaflet
 ---
-
-sabemos que la educacion es un pilar para el desarrollo, lo que hice fue crear una tuberia de datos canaliza
-
