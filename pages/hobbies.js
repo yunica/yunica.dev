@@ -39,11 +39,6 @@ const photos = [
   { src: "/assets/images/photo_6.jpeg", width: 1098, height: 716 },
   { src: "/assets/images/reader.jpeg", width: 1080, height: 720 },
   { src: "/assets/images/cine.jpeg", width: 768, height: 1024 },
-  {
-    src: "assets/images/131f27c4-efdd-4e95-b525-284534562d1c.png",
-    width: 768,
-    height: 1024,
-  },
   { src: "assets/images/1691529553031.jpeg", width: 1200, height: 821 },
   { src: "assets/images/20231027_075218.png", width: 1200, height: 676 },
   {
@@ -115,11 +110,11 @@ function Hobbies() {
         </MDTypography>
         <MDTypography variant="body1" textTransform="none" opacity={0.7}>
           Outside of my professional life in geospatial data, I am a fervent
-          travel enthusiast, capturing the globe through my camera&apos;s lens in
-          search of fresh perspectives and hidden stories. Skating offers me a
-          sense of freedom and fluid motion. On my motorbike, I embrace the thrill of
-          discovering uncharted paths, each journey a blend of adventure and the
-          joy of the open road, revealing stories.
+          travel enthusiast, capturing the globe through my camera&apos;s lens
+          in search of fresh perspectives and hidden stories. Skating offers me
+          a sense of freedom and fluid motion. On my motorbike, I embrace the
+          thrill of discovering uncharted paths, each journey a blend of
+          adventure and the joy of the open road, revealing stories.
         </MDTypography>
         <PhotoAlbum
           layout="masonry"
