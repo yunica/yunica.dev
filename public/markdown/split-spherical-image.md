@@ -4,10 +4,10 @@ image: /assets/split-spherical-image.jpg
 description: Bunch of scripts to process and convert Mapillary spherical images into cube imagen and then into simple images for specific area in Mapillary API.
 repo: https://github.com/developmentseed/spherical2images
 order: 1
-category: 
+category:
   - python
   - docker
-  - shell
+  - gnubash
 ---
 
 bod

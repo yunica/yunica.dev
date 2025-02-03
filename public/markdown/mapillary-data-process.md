@@ -5,10 +5,10 @@ description: The package provides a comprehensive suite of tools for working wit
 external_link: https://developmentseed.org/geokit-doc-seed/usage/mapillary/
 repo: https://github.com/developmentseed/geokit/tree/develop/python-scripts/geokit_py/mapillary
 order: 2
-category: 
+category:
   - python
   - docker
-  - shell
+  - gnubash
 ---
 
 bod
