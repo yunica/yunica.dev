@@ -11,7 +11,10 @@ import {
   VideoCameraFrontOutlined,
   SatelliteAltOutlined,
   Storage,
-  Api
+  Api,
+  LocalTaxi,
+  Coronavirus,
+  LocalHospital,
 } from "@mui/icons-material";
 
 // skate
@@ -19,34 +22,76 @@ import {
 export const experience = [
   {
     icon: "notifications",
-    title: "Geospatial data engineer",
-    dateTime: "Oct, 2019 - current",
-    description:
-      "At Development Seed, I developed tools for data creation and validation in machine learning projects, and engineered ETL processes from various sources such as web scraping, vector and raster GIS data, databases, APIs, and tabular data, with a focus on improving efficiency and data integrity.",
-    detail: "",
+    title: "Geospatial Data Engineer | Geo Compas AI",
+    dateTime: "2024 - Present",
+    details: [
+      <p key={1}>
+        Implemented <b>real-time data pipelines</b> for vehicle tracking using
+        <b> Kafka and AWS Lambda</b>.
+      </p>,
+      <p key={2}>
+        Developed a real-time monitoring interface and a client application for
+        location streaming.
+      </p>,
+      <p key={3}>
+        Built applications using <b> PostGIS, Python, and ReactJS </b>for
+        geospatial data visualization.
+      </p>,
+    ],
   },
   {
     icon: "data_object",
-    title: "Cadastre assistant",
-    dateTime: "Feb, 2019 - Oct, 2019",
-    description:
-      "I spearheaded the development of a spatial cadastral application at SEDA Ayacucho, where I registered and stored both spatial and tabular information of the city's basic services. Fulfilling the role of a Full Stack Developer, I not only generated but also deployed the application, integrating comprehensive data solutions for Ayacucho's urban infrastructure.",
-    detail: "",
+    title: "Geospatial Data Engineer | Developmentseed",
+    dateTime: "2019 - 2024",
+    details: [
+      <p key={1}>
+        Developed and optimized <b>cloud-based ETL processes </b> for geospatial
+        data processing using <b>Python, NodeJs, Airflow, Docker and AWS</b>.
+      </p>,
+      <p key={2}>
+        Created tools for <b>Machine Learning</b> in GIS, including training
+        data generation from satellite images.
+      </p>,
+      <p key={3}>
+        Implemented custom algorithms for raster data transformation and
+        georeferencing.
+      </p>,
+      <p key={4}>
+        Contributed to <b>OpenStreetMap</b>, including developing advanced
+        plugins for JOSM.
+      </p>,
+      <p key={5}>
+        Presented projects and advancements at international conferences such as
+        <b>State of the Map and Mapping USA 2022</b>.
+      </p>,
+    ],
   },
   {
     icon: "data_object",
-    title: "Full stack developer",
-    dateTime: "Oct, 2018 - current",
-    description:
-      "As a Full Stack Developer, I design and develop applications for institutions in my environment, contributing solutions in areas such as cadastral systems, education, and finance. My focus is on creating solutions that align with their objectives and support their processes, ensuring that each application is tailored to meet the specific needs and goals of these institutions.",
-    detail: "",
+    title: "Backend & GIS Developer | Freelance",
+    dateTime: "2018 - Present",
+    details: [
+      <p key={1}>
+        Developed <b>APIs and geospatial web applications</b> using{" "}
+        <b>
+          Mapbox, Leaflet,Python, ReactJs, Docker, Geodjango, and OpenLayers
+        </b>
+        .
+      </p>,
+      <p key={2}>
+        Automated GIS workflows with <b>Python, Bash, and Docker</b>.
+      </p>,
+      <p key={3}>
+        Created <b> web scraping and backend processing </b> for geospatial data
+        analysis.
+      </p>,
+    ],
   },
   {
     icon: "school",
     title: "Systems Engineer",
-    dateTime: "Jan, 2018 - Aug, 2018 ",
+    dateTime: "2012 -  2018 ",
     description: "Universidad Nacional de San Cristóbal de Huamanga.",
-    detail: "",
   },
 ];
 
@@ -78,77 +123,117 @@ export const expertice = [
     type: "collapse",
     name: "Geospatial process (raster and vector data)",
     key: "Geospatial",
-    icon: <Public  fontSize="medium"  color="inherit" />,
+    icon: <Public fontSize="medium" color="inherit" />,
     noCollapse: true,
   },
   {
     type: "collapse",
     name: "Extract, transform and load (ETL)",
     key: "etl",
-    icon: <DatasetLinked  fontSize="medium"  color="inherit" />,
+    icon: <DatasetLinked fontSize="medium" color="inherit" />,
     noCollapse: true,
   },
   {
     type: "collapse",
     name: "Data visualization",
     key: "data-visualization",
-    icon: <PieChartOutline  fontSize="medium"  color="inherit" />,
+    icon: <PieChartOutline fontSize="medium" color="inherit" />,
     noCollapse: true,
   },
   {
     type: "collapse",
     name: "Backend and API Developer",
     key: "backend-developer",
-    icon: <Api  fontSize="medium"  color="inherit" />,
+    icon: <Api fontSize="medium" color="inherit" />,
     noCollapse: true,
   },
   {
     type: "collapse",
     name: "Cloud services",
     key: "cloud-services",
-    icon: <FilterDrama  fontSize="medium"  color="inherit" />,
+    icon: <FilterDrama fontSize="medium" color="inherit" />,
     noCollapse: true,
   },
   {
     type: "collapse",
     name: "Bash and Docker Fan",
     key: "bash-fan",
-    icon: <Terminal  fontSize="medium"  color="inherit" />,
+    icon: <Terminal fontSize="medium" color="inherit" />,
     noCollapse: true,
   },
   {
     type: "collapse",
     name: "Programming and Scripting",
     key: "script-fan",
-    icon: <Code  fontSize="medium"  color="inherit" />,
+    icon: <Code fontSize="medium" color="inherit" />,
     noCollapse: true,
   },
   {
     type: "collapse",
     name: "Database Development and Management",
     key: "database-fan",
-    icon: <Storage  fontSize="medium"  color="inherit" />,
+    icon: <Storage fontSize="medium" color="inherit" />,
     noCollapse: true,
   },
-  
 ];
 
 export const contribution = [
   {
     type: "collapse",
-    name: "Magic Wand Plugin for Java OpenStreetMap Editor (JOSM),  it allows users to label areas using a spectrum of colors",
-    key: "magic-wand-josm",
-    icon: <AutoFixHigh fontSize="medium" color="inherit" />,
-    links: [
-      "https://github.com/developmentseed/JosmMagicWand",
-      "https://josm.openstreetmap.de/wiki/Plugins",
+    name: "Real-Time Vehicle Tracking",
+    details: [
+      <p key={1}>
+        Designed and implemented an <b>ETL process</b> for
+        <b> real-time vehicle tracking</b>
+        using <b> Kafka</b>.
+      </p>,
+      <p key={2}>
+        Developed an <b>admin interface</b> for monitoring vehicle movements.
+      </p>,
+      <p key={3}>
+        Built a client application enabling users to send and visualize live
+        locations.
+      </p>,
+      <p key={4}>
+        Technologies:
+        <b> Kafka, AWS Lambda, PostGIS, ReactJS, Python, Docker, Socket</b>.
+      </p>,
     ],
+    key: "real-time-vehicle",
+    icon: <LocalTaxi fontSize="medium" color="inherit" />,
+    links: [],
   },
   {
     type: "collapse",
-    name: "Mobile Signal Coverage in Educational Institutions in Peru, focuses on showing the coverage points for educational institutions and the coverage area by antennas.",
+    name: "AtlasArena Dashboard",
+    key: "atlas-arena",
+    details: [
+      <p key={1}>
+        Platform for modeling <b>Arenavirus</b> distribution based on{" "}
+        <b> Species Distribution Models (SDMs)</b>.
+      </p>,
+      <p key={2}>
+        Technologies: <b>GIS, Python, ReactJs, Docker, Mapbox</b>.
+      </p>,
+    ],
+
+    icon: <Coronavirus fontSize="medium" color="inherit" />,
+    links: ["https://atlasarena.surge.sh/explore"],
+  },
+  {
+    type: "collapse",
+    name: "Peru Schools App",
+    details: [
+      <p key={1}>
+        Application for <b> mobile signal</b> coverage analysis in{" "}
+        <b>Peruvian educational institutions</b>.
+      </p>,
+      <p key={2}>
+        Technologies: <b>ReactJs, Python, Mapbox, Docker, Gdal, Bash, AWS</b>.
+      </p>,
+    ],
     key: "peru-school-app",
-    icon: <School  fontSize="medium"  color="inherit" />,
+    icon: <School fontSize="medium" color="inherit" />,
     noCollapse: true,
     links: [
       "https://developmentseed.org/peru-mobile-signal-schools/",
@@ -156,6 +241,46 @@ export const contribution = [
       "https://www.linkedin.com/posts/juniorflores_coberturamaejvil-educaciaejn-ayacucho-activity-7103837157366063104-QwW-?utm_source=share&utm_medium=member_desktop",
     ],
   },
+  {
+    type: "collapse",
+    name: "Urban Public Services Inaccessibility",
+    details: [
+      <p key={1}>
+        Tool for analyzing <b> population distribution</b> and
+        <b> access to basic services </b> from OpenStreetMap.
+      </p>,
+      <p key={2}>
+        Technologies:{" "}
+        <b> ReactJs, Python, Mapbox, Docker, Gdal, Bash, AWS, OpenStreetMap</b>.
+      </p>,
+    ],
+    key: "urban-public-service",
+    icon: <LocalHospital fontSize="medium" color="inherit" />,
+    noCollapse: true,
+    links: ["https://yunica.dev/mapfest_mapmaking_challenge_2024/"],
+  },
+
+  {
+    type: "collapse",
+    name: "SAM Plugin - JOSM",
+    details: [
+      <p key={1}>
+        Integration of <b> Segment Anything Model (SAM)</b> into the
+        <b>OpenStreetMap ecosystem</b>.
+      </p>,
+      <p key={2}>
+        Technologies: <b> Java, JOSM, OpenStreetMap, Gradle, OpenCv</b>.
+      </p>,
+    ],
+    key: "josm-sam-plugin",
+    icon: <AutoFixHigh fontSize="medium" color="inherit" />,
+    noCollapse: true,
+    links: [
+      "https://github.com/developmentseed/JosmMagicWand",
+      "https://josm.openstreetmap.de/wiki/Plugins",
+    ],
+  },
+
   {
     type: "collapse",
     name: "Speaker at the State of the Map Brasil 2023 (SOTM - BR), where I talked about my contribution and the integration of the meta model segment anything(SAM) to the JOSM plugin.",
@@ -169,18 +294,9 @@ export const contribution = [
   },
   {
     type: "collapse",
-    name: "Landsat2geojson Package is written in Python and uses the EarthExplorer and Overpass portal interface to search, download, and process scenes from Landsat Collections via the command line.",
-    key: "landsat2geojson",
-    icon: <SatelliteAltOutlined  fontSize="medium"  color="inherit" />,
-    noCollapse: true,
-    links: ["https://github.com/yunica/landsat2geojson"],
-  },
-  {
-    type: "collapse",
     name: "Speaker at Mapping USA 2022, where I talked about my creation of the Josm Magic Wand, focused on the use of image processing",
     key: "mapping-usa-",
-    icon: <VideoCameraFrontOutlined
-     fontSize="medium"  color="inherit" />,
+    icon: <VideoCameraFrontOutlined fontSize="medium" color="inherit" />,
     noCollapse: true,
     links: [
       "https://openstreetmap.us/events/mapping-usa/2022/",

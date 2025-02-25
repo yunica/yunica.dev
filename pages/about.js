@@ -55,13 +55,14 @@ function About({ data }) {
   const { darkMode } = controller;
 
   const renderTimelineItems = experience.map(
-    ({ color, icon, title, dateTime, description }, k) => (
+    ({ color, icon, title, dateTime, description, details }, k) => (
       <TimelineItem
         key={title + color}
         icon={icon}
         title={title}
         dateTime={dateTime}
         description={description}
+        details={details}
         lastItem={k === experience.length - 1}
       />
     )
@@ -75,178 +76,190 @@ function About({ data }) {
       color={darkMode ? "white" : "dark"}
       circular
       variant="outlined"
-      sx={{ margin: "3px" }}
+      sx={{ margin: "4px" }}
     >
       {i.replace("dot", ".").replace("amazon", "amazon ")}
     </MDButton>
   ));
 
+  const years = new Date().getFullYear() - 2021;
+
+  const renderAbout = () => (
+    <>
+      <MDBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={2}
+        px={2}
+      >
+        <MDTypography
+          variant="h2"
+          sx={{ fontSize: "1rem" }}
+          fontWeight="medium"
+          textTransform="uppercase"
+        >
+          <MDTypography variant="span" fontWeight="bold" opacity={0.7}>
+            01{" "}
+          </MDTypography>
+          About me
+        </MDTypography>
+      </MDBox>
+      <MDBox p={2}>
+        <MDBox>
+          <MDTypography variant="body2" color={darkMode ? "white" : "dark"}>
+            Data Engineer specialized in{" "}
+            <b>GIS and geospatial data processing</b> with over{" "}
+            <b>{years} years of experience</b> in designing, developing, and
+            optimizing <b>real-time data pipelines</b>, satellite image
+            processing, and automating ETL workflows. With experience in{" "}
+            <b>
+              Big Data, Machine Learning, cloud services (AWS/GCP), and
+              geospatial application development
+            </b>
+            . Recognized for implementing custom algorithms for geospatial
+            analysis and developing high-impact platforms used by government
+            institutions and international organizations.
+          </MDTypography>
+        </MDBox>
+      </MDBox>
+    </>
+  );
+  const renderExpertise = () => (
+    <>
+      <MDBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={2}
+        px={2}
+      >
+        <MDTypography
+          variant="h2"
+          sx={{ fontSize: "1rem" }}
+          fontWeight="medium"
+          textTransform="uppercase"
+        >
+          <MDTypography variant="span" fontWeight="bold" opacity={0.7}>
+            02{" "}
+          </MDTypography>
+          my expertise
+        </MDTypography>
+      </MDBox>
+      <MDBox p={2}>
+        <MDBox lineHeight={1}>
+          <ListSkill data={expertice} />
+        </MDBox>
+      </MDBox>
+    </>
+  );
+  const renderTechskills = () => (
+    <>
+      <MDBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={2}
+        px={2}
+      >
+        <MDTypography
+          variant="h2"
+          sx={{ fontSize: "1rem" }}
+          fontWeight="medium"
+          textTransform="uppercase"
+        >
+          <MDTypography variant="span" fontWeight="bold" opacity={0.7}>
+            03{" "}
+          </MDTypography>{" "}
+          Tech skills
+        </MDTypography>
+      </MDBox>
+      <MDBox p={2}>
+        <MDBox>{renderTechSkill}</MDBox>
+      </MDBox>
+    </>
+  );
+  const renderHighlightedProjects = () => (
+    <>
+      <MDBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={2}
+        px={2}
+      >
+        <MDTypography
+          variant="h2"
+          sx={{ fontSize: "1rem" }}
+          fontWeight="medium"
+          textTransform="uppercase"
+        >
+          <MDTypography variant="span" fontWeight="bold" opacity={0.7}>
+            04{" "}
+          </MDTypography>
+          Highlighted Projects
+        </MDTypography>
+      </MDBox>
+      <MDBox p={2}>
+        <MDBox lineHeight={1}>
+          <ListSkill data={contribution} />
+        </MDBox>
+      </MDBox>
+    </>
+  );
+  const renderMyCarrer = () => (
+    <TimelineList title="MY CAREER" index="05" dark={darkMode} shadow={false}>
+      {renderTimelineItems}
+    </TimelineList>
+  );
+  const renderGetInTouch = () => (
+    <>
+      <MDBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={2}
+        px={2}
+      >
+        <MDTypography
+          variant="h2"
+          sx={{ fontSize: "1rem" }}
+          fontWeight="medium"
+          textTransform="uppercase"
+        >
+          <MDTypography variant="span" fontWeight="bold" opacity={0.7}>
+            06{" "}
+          </MDTypography>{" "}
+          get in touch
+        </MDTypography>
+      </MDBox>
+      <MDBox p={2}>
+        <SocialContact />
+      </MDBox>
+    </>
+  );
   return (
     <DashboardLayout>
-      <MDBox />
       <Header>
         <MDBox mt={2} mb={1}>
           <Grid container spacing={2}>
             <Grid item xs={12} md={6} xl={4}>
               <Card sx={{ height: "100%", boxShadow: "none" }}>
-                <MDBox
-                  display="flex"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  pt={2}
-                  px={2}
-                >
-                  <MDTypography
-                    variant="h2"
-                    sx={{ fontSize: "1rem" }}
-                    fontWeight="medium"
-                    textTransform="uppercase"
-                  >
-                    <MDTypography
-                      variant="span"
-                      fontWeight="bold"
-                      opacity={0.7}
-                    >
-                      01{" "}
-                    </MDTypography>
-                    About me
-                  </MDTypography>
-                </MDBox>
-                <MDBox p={2}>
-                  <MDBox mb={1} lineHeight={1}>
-                    <MDTypography
-                      variant="button"
-                      color={darkMode ? "white" : "dark"}
-                    >
-                      As a Geospatial Data Engineer, I am zealous about turning
-                      algorithms and data into impactful solutions. My technical
-                      prowess spans backend development to geoprocessing and
-                      CI/CD. An active contributor and speaker in the
-                      OpenStreetMap community, my goal is to innovate and create
-                      meaningful change.
-                    </MDTypography>
-                  </MDBox>
-                </MDBox>
-                <MDBox
-                  display="flex"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  pt={2}
-                  px={2}
-                >
-                  <MDTypography
-                    variant="h2"
-                    sx={{ fontSize: "1rem" }}
-                    fontWeight="medium"
-                    textTransform="uppercase"
-                  >
-                    <MDTypography
-                      variant="span"
-                      fontWeight="bold"
-                      opacity={0.7}
-                    >
-                      02{" "}
-                    </MDTypography>{" "}
-                    Tech skills
-                  </MDTypography>
-                </MDBox>
-                <MDBox p={2}>
-                  <MDBox>{renderTechSkill}</MDBox>
-                </MDBox>
-                <MDBox
-                  display="flex"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  pt={2}
-                  px={2}
-                >
-                  <MDTypography
-                    variant="h2"
-                    sx={{ fontSize: "1rem" }}
-                    fontWeight="medium"
-                    textTransform="uppercase"
-                  >
-                    <MDTypography
-                      variant="span"
-                      fontWeight="bold"
-                      opacity={0.7}
-                    >
-                      03{" "}
-                    </MDTypography>{" "}
-                    get in touch
-                  </MDTypography>
-                </MDBox>
-                <MDBox p={2}>
-                  <SocialContact />
-                </MDBox>
+                {renderAbout()}
+                {renderExpertise()}
+                {renderTechskills()}
               </Card>
             </Grid>
             <Grid item xs={12} md={6} xl={4} sx={{ display: "flex" }}>
               <Divider orientation="vertical" sx={{ ml: -2, mr: 1 }} />
               <Card sx={{ height: "100%", boxShadow: "none" }}>
-                <MDBox
-                  display="flex"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  pt={2}
-                  px={2}
-                >
-                  <MDTypography
-                    variant="h2"
-                    sx={{ fontSize: "1rem" }}
-                    fontWeight="medium"
-                    textTransform="uppercase"
-                  >
-                    <MDTypography
-                      variant="span"
-                      fontWeight="bold"
-                      opacity={0.7}
-                    >
-                      04{" "}
-                    </MDTypography>
-                    my expertise
-                  </MDTypography>
-                </MDBox>
-                <MDBox p={2}>
-                  <MDBox lineHeight={1}>
-                    <ListSkill data={expertice} />
-                  </MDBox>
-                </MDBox>
-                <MDBox
-                  display="flex"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  pt={2}
-                  px={2}
-                >
-                  <MDTypography
-                    variant="h2"
-                    sx={{ fontSize: "1rem" }}
-                    fontWeight="medium"
-                    textTransform="uppercase"
-                  >
-                    <MDTypography
-                      variant="span"
-                      fontWeight="bold"
-                      opacity={0.7}
-                    >
-                      05{" "}
-                    </MDTypography>
-                    My contribution
-                  </MDTypography>
-                </MDBox>
-                <MDBox p={2}>
-                  <MDBox lineHeight={1}>
-                    <ListSkill data={contribution} />
-                  </MDBox>
-                </MDBox>
+                {renderHighlightedProjects()}
               </Card>
               <Divider orientation="vertical" sx={{ mx: 0 }} />
             </Grid>
             <Grid item xs={12} xl={4}>
-              <TimelineList title="MY CAREER" dark={darkMode} shadow={false}>
-                {renderTimelineItems}
-              </TimelineList>
+              {renderMyCarrer()}
+              {renderGetInTouch()}
             </Grid>
           </Grid>
         </MDBox>

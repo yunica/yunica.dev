@@ -1,7 +1,5 @@
-
-
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";// @mui material components
+import PropTypes from "prop-types"; // @mui material components
 import Icon from "@mui/material/Icon";
 
 // Custom components
@@ -14,7 +12,15 @@ import { useTimeline } from "/examples/Timeline/context";
 // Custom styles for the TimelineItem
 import timelineItem from "/examples/Timeline/TimelineItem/styles";
 
-function TimelineItem({ color, icon, title, dateTime, description, lastItem }) {
+function TimelineItem({
+  color,
+  icon,
+  title,
+  dateTime,
+  description,
+  details,
+  lastItem,
+}) {
   const isDark = useTimeline();
 
   return (
@@ -40,30 +46,42 @@ function TimelineItem({ color, icon, title, dateTime, description, lastItem }) {
       >
         <Icon fontSize="inherit">{icon}</Icon>
       </MDBox>
-      <MDBox
-        ml={5.75}
-        pt={description ? 0.7 : 0.5}
-        lineHeight={0}
-        maxWidth="30rem"
-      >
+      <MDBox ml={5.75} pt={description ? 0.7 : 0.5} maxWidth="30rem">
         <MDTypography
-          variant="button"
-          fontWeight="medium"
+          variant="body2"
+          fontWeight="bold"
           color={isDark ? "white" : "dark"}
         >
           {title}
         </MDTypography>
-        <MDBox mt={0.5}>
+        <MDBox mt={0.5} lineHeight={0}>
           <MDTypography variant="caption" color={isDark ? "secondary" : "text"}>
             {dateTime}
           </MDTypography>
         </MDBox>
-        <MDBox mt={2} mb={1.5}>
-          {description ? (
-            <MDTypography variant="button" color={isDark ? "white" : "dark"}>
+        <MDBox mt={1} mb={1.5}>
+          {description && (
+            <MDTypography
+              variant="button"
+              component="p"
+              color={isDark ? "white" : "dark"}
+            >
               {description}
             </MDTypography>
-          ) : null}
+          )}
+          {details && details.length && (
+            <MDTypography
+              component="div"
+              variant="button"
+              color={isDark ? "white" : "dark"}
+            >
+              <ul>
+                {details.map((i, k) => (
+                  <li key={k}>{i}</li>
+                ))}
+              </ul>
+            </MDTypography>
+          )}
         </MDBox>
       </MDBox>
     </MDBox>
@@ -93,6 +111,7 @@ TimelineItem.propTypes = {
   title: PropTypes.string.isRequired,
   dateTime: PropTypes.string.isRequired,
   description: PropTypes.string,
+  details: PropTypes.array,
   lastItem: PropTypes.bool,
 };
 

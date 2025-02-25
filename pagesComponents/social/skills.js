@@ -10,6 +10,30 @@ const ListSkill = ({ data }) => {
 
   const { darkMode } = controller;
 
+  const renderBody = (item) => {
+    const { name, details } = item;
+
+    if (details && details.length) {
+      return (
+        <>
+          <MDTypography fontWeight="bold" variant="body2">
+            {name}
+          </MDTypography>
+          <MDBox pl={2} color="null">
+            <ul>
+              {details.map((i, k) => (
+                <li key={k}>{i}</li>
+              ))}
+            </ul>
+          </MDBox>
+        </>
+      );
+    }
+    return <MDTypography variant="body2">{name}</MDTypography>;
+  };
+
+  if (!data) return null;
+
   return (
     <MDBox
       component="ul"
@@ -35,7 +59,7 @@ const ListSkill = ({ data }) => {
               transitions,
             }) => ({
               display: "flex",
-              alignItems: "center",
+              alignItems: item.details ? "self-start" : "center",
               borderRadius: borderRadius.md,
               padding: `${pxToRem(8)} ${pxToRem(0)}`,
               transition: transitions.create("background-color", {
@@ -43,18 +67,22 @@ const ListSkill = ({ data }) => {
                 duration: transitions.duration.shorter,
               }),
 
-              "&:hover": {
-                backgroundColor: light.main,
-              },
+              // "&:hover": {
+              //   backgroundColor: light.main,
+              // },
             })}
           >
             <MDBox lineHeight={1} color={darkMode ? "white" : "dark"} mr={1}>
               {item.icon}
             </MDBox>
-            <MDBox color={darkMode ? "white" : "dark"} fontSize="small" fontWeight={1}>
-              <p>{item.name}</p>
+            <MDBox
+              color={darkMode ? "white" : "dark"}
+              fontSize="small"
+              fontWeight={1}
+            >
+              {renderBody(item)}
               {item.links && (
-                <label>
+                <MDBox component="label" color="null" pl={2}>
                   {item.links.map((link, k) => (
                     <MuiLink
                       key={k}
@@ -64,14 +92,12 @@ const ListSkill = ({ data }) => {
                       download
                       mr={1}
                     >
-                      <Tooltip
-                        title={`link ${k + 1}`}
-                      >
+                      <Tooltip title={`link ${k + 1}`}>
                         <Icon fontSize="medium">link</Icon>
                       </Tooltip>
                     </MuiLink>
                   ))}
-                </label>
+                </MDBox>
               )}
             </MDBox>
           </MDTypography>

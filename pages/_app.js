@@ -72,8 +72,6 @@ function Main({ Component, pageProps }) {
     layout,
     openConfigurator,
     sidenavColor,
-    transparentSidenav,
-    whiteSidenav,
     darkMode,
   } = controller;
   const [onMouseEnter, setOnMouseEnter] = useState(false);

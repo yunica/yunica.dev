@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";// @mui material components
+import PropTypes from "prop-types"; // @mui material components
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
@@ -12,7 +12,7 @@ import MDBox from "/components/MDBox";
 import breakpoints from "/assets/theme/base/breakpoints";
 
 // Images
-import backgroundImage from "/assets/images/bg-profile.jpg";
+// import backgroundImage from "/assets/images/bg-profile.jpg";
 
 function Header({ children }) {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
@@ -37,40 +37,14 @@ function Header({ children }) {
     return () => window.removeEventListener("resize", handleTabsOrientation);
   }, [tabsOrientation]);
 
-
   return (
     <MDBox position="relative" mb={5}>
-      <MDBox
-        display="flex"
-        alignItems="center"
-        position="relative"
-        minHeight="20.75rem"
-        borderRadius="xl"
-        sx={{
-          backgroundImage: ({
-            functions: { rgba, linearGradient },
-            palette: { gradients },
-          }) =>
-            `${linearGradient(
-              rgba(gradients.dark.main, 0.01),
-              rgba(gradients.dark.state, 0.01)
-            )}, url(${backgroundImage.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "50%",
-          overflow: "hidden",
-        }}
-      />
       <Card
         sx={{
           position: "relative",
-          mt: -18,
-          mx: 3,
-          py: 2,
-          px: 2,
         }}
       >
-        <Grid container spacing={3} alignItems="center">
-        </Grid>
+        <Grid container alignItems="center"></Grid>
         {children}
       </Card>
     </MDBox>
