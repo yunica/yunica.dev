@@ -112,7 +112,7 @@ const Main = ({ data }) => {
             <b>GIS and geospatial data processing</b> with over{" "}
             <b>{years} years of experience</b> in designing, developing, and
             optimizing <b>real-time data pipelines</b>, satellite image
-            processing, and automating ETL workflows. With experience in{" "}
+            processing, and automating ETL workflows. Experienced in{" "}
             <b>
               Big Data, Machine Learning, cloud services (AWS/GCP), and
               geospatial application development

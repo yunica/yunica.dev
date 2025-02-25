@@ -63,7 +63,7 @@ export const experience = [
       </p>,
       <p key={5}>
         Presented projects and advancements at international conferences such as
-        <b>State of the Map and Mapping USA 2022</b>.
+        <b> State of the Map and Mapping USA 2022 </b>.
       </p>,
     ],
   },
