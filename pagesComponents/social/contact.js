@@ -3,8 +3,7 @@ import MDTypography from "/components/MDTypography";
 import { socialRoute } from "/utils/routes";
 import { useMaterialUIController } from "/context";
 
-const SocialContact = ( ) => {
-
+const SocialContact = () => {
   const [controller] = useMaterialUIController();
 
   const { darkMode } = controller;
@@ -50,7 +49,7 @@ const SocialContact = ( ) => {
             <MDBox lineHeight={1} color={darkMode ? "white" : "dark"} mr={1}>
               {item.icon}
             </MDBox>
-            {item.name}
+            {item.key} : {item.name}
           </MDTypography>
         </MDBox>
       ))}
