@@ -63,7 +63,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
   useEffect(() => {
     // A function that sets the mini state of the sidenav.
     function handleMiniSidenav() {
-      setMiniSidenav(dispatch, true);
+      setMiniSidenav(dispatch, false);
       setTransparentSidenav(
         dispatch,
         window.innerWidth < 1200 ? false : transparentSidenav
