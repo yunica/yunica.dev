@@ -90,7 +90,7 @@ export const experience = [
   {
     icon: "school",
     title: "Systems Engineer",
-    dateTime: "2012 -  2018 ",
+    dateTime: "2012 - 2018 ",
     description: "Universidad Nacional de San Cristóbal de Huamanga.",
   },
 ];
