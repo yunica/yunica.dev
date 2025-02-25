@@ -52,14 +52,14 @@ const routes = [
     noCollapse: true,
   },
   { type: "divider", key: "divider-0" },
-  // {
-  //   type: "collapse",
-  //   name: "About",
-  //   key: "about",
-  //   route: "/about",
-  //   icon: <Icon fontSize="medium">person</Icon>,
-  //   noCollapse: true,
-  // },
+  {
+    type: "collapse",
+    name: "About",
+    key: "about",
+    route: "/",
+    icon: <Icon fontSize="medium">person</Icon>,
+    noCollapse: true,
+  },
   // {
   //   type: "collapse",
   //   name: "Services",
@@ -90,6 +90,20 @@ const routes = [
     key: "hobbies",
     route: "/hobbies",
     icon: <Icon fontSize="medium">skateboarding</Icon>,
+    noCollapse: true,
+  },
+  { type: "title", title: "Resume", key: "title-resume" },
+  {
+    type: "collapse",
+    name: "DOWNLOAD RESUME",
+    key: "hobbies",
+    href: "/junior_flores_data.pdf",
+    download: true,
+    icon: (
+      <Icon fontSize="medium" color="error">
+        description
+      </Icon>
+    ),
     noCollapse: true,
   },
   { type: "title", title: "Get in touch", key: "title-social" },

@@ -1,7 +1,5 @@
-
-
 // prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";// @mui material components
+import PropTypes from "prop-types"; // @mui material components
 import Collapse from "@mui/material/Collapse";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
