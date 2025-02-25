@@ -45,11 +45,12 @@ export const experience = [
     dateTime: "2019 - 2024",
     details: [
       <p key={1}>
-        Developed and optimized <b>cloud-based ETL processes </b> for geospatial
-        data processing using <b>Python, NodeJs, Airflow, Docker and AWS</b>.
+        Developed and optimized <b> cloud-based ETL processes </b> for
+        geospatial data processing using{" "}
+        <b> Python, NodeJs, Airflow, Docker and AWS</b>.
       </p>,
       <p key={2}>
-        Created tools for <b>Machine Learning</b> in GIS, including training
+        Created tools for <b> Machine Learning </b> in GIS, including training
         data generation from satellite images.
       </p>,
       <p key={3}>
@@ -57,7 +58,7 @@ export const experience = [
         georeferencing.
       </p>,
       <p key={4}>
-        Contributed to <b>OpenStreetMap</b>, including developing advanced
+        Contributed to <b> OpenStreetMap</b>, including developing advanced
         plugins for JOSM.
       </p>,
       <p key={5}>
@@ -74,7 +75,7 @@ export const experience = [
       <p key={1}>
         Developed <b>APIs and geospatial web applications</b> using{" "}
         <b>
-          Mapbox, Leaflet,Python, ReactJs, Docker, Geodjango, and OpenLayers
+          Mapbox, Leaflet,Python, ReactJS, Docker, Geodjango, and OpenLayers
         </b>
         .
       </p>,
@@ -184,11 +185,11 @@ export const contribution = [
     details: [
       <p key={1}>
         Designed and implemented an <b>ETL process</b> for
-        <b> real-time vehicle tracking</b>
+        <b> real-time vehicle tracking </b>
         using <b> Kafka</b>.
       </p>,
       <p key={2}>
-        Developed an <b>admin interface</b> for monitoring vehicle movements.
+        Developed an <b> admin interface </b> for monitoring vehicle movements.
       </p>,
       <p key={3}>
         Built a client application enabling users to send and visualize live
@@ -209,11 +210,11 @@ export const contribution = [
     key: "atlas-arena",
     details: [
       <p key={1}>
-        Platform for modeling <b>Arenavirus</b> distribution based on{" "}
+        Platform for modeling <b>Arena Virus</b> distribution based on
         <b> Species Distribution Models (SDMs)</b>.
       </p>,
       <p key={2}>
-        Technologies: <b>GIS, Python, ReactJs, Docker, Mapbox</b>.
+        Technologies: <b>GIS, Python, ReactJS, Docker, Mapbox</b>.
       </p>,
     ],
 
@@ -229,7 +230,7 @@ export const contribution = [
         <b>Peruvian educational institutions</b>.
       </p>,
       <p key={2}>
-        Technologies: <b>ReactJs, Python, Mapbox, Docker, Gdal, Bash, AWS</b>.
+        Technologies: <b>ReactJS, Python, Mapbox, Docker, GDAL, Bash, AWS</b>.
       </p>,
     ],
     key: "peru-school-app",
@@ -247,11 +248,12 @@ export const contribution = [
     details: [
       <p key={1}>
         Tool for analyzing <b> population distribution</b> and
-        <b> access to basic services </b> from OpenStreetMap.
+        <b> access to basic services </b> from{" "}
+        <b>Viet Nam, Lao, Myanmar, Nepal, Afghanistan and Pakistan</b>.
       </p>,
       <p key={2}>
         Technologies:{" "}
-        <b> ReactJs, Python, Mapbox, Docker, Gdal, Bash, AWS, OpenStreetMap</b>.
+        <b> ReactJS, Python, Mapbox, Docker, GDAL, Bash, AWS, OpenStreetMap</b>.
       </p>,
     ],
     key: "urban-public-service",
@@ -266,7 +268,7 @@ export const contribution = [
     details: [
       <p key={1}>
         Integration of <b> Segment Anything Model (SAM)</b> into the
-        <b>OpenStreetMap ecosystem</b>.
+        <b> OpenStreetMap ecosystem</b>.
       </p>,
       <p key={2}>
         Technologies: <b> Java, JOSM, OpenStreetMap, Gradle, OpenCv</b>.
