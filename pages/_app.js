@@ -47,7 +47,7 @@ import avatarPhoto from "/assets/images/profile.jpeg";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createCache({ key: "css", prepend: true });
-
+const NEXT_PUBLIC_GA_MEASUREMENT_ID = "G-4EWKTJNZHV";
 const ButtonContainer = ({ children }) => (
   <div
     style={{
@@ -180,19 +180,18 @@ function MyApp({
   pageProps,
   emotionCache = clientSideEmotionCache,
 }) {
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", NEXT_PUBLIC_GA_MEASUREMENT_ID);
+  }, []);
+
   return (
     <MaterialUIControllerProvider>
       <CacheProvider value={emotionCache}>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-4EWKTJNZHV" />
-        <Script id="google-analytics">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
- 
-          gtag('config', 'GA_MEASUREMENT_ID');
-        `}
-        </Script>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="shortcut icon" href={favicon.src} />
@@ -215,6 +214,18 @@ function MyApp({
             Data Tools
           </title>
         </Head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+        `}
+        </Script>
         <Main Component={Component} pageProps={pageProps} />
       </CacheProvider>
     </MaterialUIControllerProvider>
